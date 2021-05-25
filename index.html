@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="search_city"> 
+        <input type="search" class="weather_search" placeholder="Search for a City">
+       <button type="submit" class="btn_submit"><i class="fas fa-search"></i></button> 
+    </section>
+
+  <!-- <sup class="country_index">PT</sup> linha 23 -->
+    <section class="current_weather">
+        <div class="weather_today">
+            <div class="show_city text-deco">Aveiro | PT</div> 
+            <div class="weather_info_date text-deco">Monday, 20th May 2021 07:21 pm</div>
+            <div class="weather_description text-deco">Broken Clouds</div>
+            <img src="images/icons/normal_mode/unknown.svg" alt="unknown city weather" class="weather_info_icon" width="150em">
+           <div class="temperature_min_max"> 
+               <div class="weather_info_temperature text-deco temperature_today"><span class="value">30</span><span>&#176;</span>C</div>      
+               <div > 
+                   <div class="weather_info_temperature"><i class="fas fa-long-arrow-alt-up"></i>H: <span class="value">29</span><span>&#176;</span>C</div>
+                   <div class="weather_info_temperature "><i class="fas fa-long-arrow-alt-down"></i>L: <span class="value">10</span><span>&#176;</span>C</div>
+                </div>
+            </div>
+            <!-- Ver Youtube Weather Mars para o toggle entre unidades de temperatura -->
+            <div class="weather_info_celcius text-deco change_unit" style="display: none;">Display<span>&#176;</span>C</div>
+            <div class="weather_info_fahrenheit text-deco change_unit" style="display: block;">Display<span>&#176;</span>F</div>
+        </div>
+        <!-- I should used the suddo class ::before for the images, need to improve that, made for the -->
+        <div class="weather_conditions">
+            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/feels_like.png" width="25rem"><div>Feels Like</div></div>
+            <div class="text-deco text_font_value"><span class="value">29</span><sup><span> &#176;</span>C</sup></div>
+            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/humidity.svg" width="25rem"><div>Humidity</div></div>
+            <div class="text-deco text_font_value"><span class="value">29</span><sup> %</sup></div>
+            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/chance_of_rain.png" width="25rem"><div>Chance of Rain</div></div>
+            <div class="text-deco text_font_value"><span class="value">68</span><sup> %</sup></div>
+            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/wind_speed.png" width="25rem"> <div>Wind Speed</div></div>
+            <div class="text-deco text_font_value_windSpeed"><span class="value">NW 10</span><sup> km/h</sup> </div>
+            <!-- Adicionar pressão??? -->
+        </div>
+    </section>
+    <section class="week_weather">
+
+    </section>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+<footer>
+    Made by Débora Babo <img src="images/Rocketship2Colour.svg" width="25rem">
+</footer>
+</html>
