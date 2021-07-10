@@ -1,3 +1,6 @@
+/* alterar os icons com o sudo element ::before VIDEO 10 */
+/* colocaram como article os 5 dias de forcast (ver cm fizeram os outros) e minimamente resoponsivo (com flex)-ver como funcionam os media query */
+/*  */
 html {
   box-sizing: border-box;
 }
@@ -6,7 +9,7 @@ body {
   margin: 0;
   min-height: 100vh;
   padding: 10px 0;
-  background-color: #330033;
+  /* background-color: #330033; */
   background-color: #bb3b0e;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23dd7631' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23d89336'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
@@ -18,11 +21,12 @@ body {
 }
 
 footer {
-  position: absolute;
+  /* position: fixed; */
+  left: 0;
   bottom: 0;
   width: 100%;
-  color: #dbedf3;
-  font-family: sans-serif;
+  /* background-color: red; */
+  /* color: white; */
   text-align: center;
 }
 .search_city {
@@ -35,7 +39,8 @@ footer {
   background-color: #ffd5aba9;
   font-size: 1rem;
   color: inherit;
-  border-radius: 2rem;
+  border-radius: 2rem 0rem 0 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 .weather_search::placeholder {
   color: #fff2e5;
@@ -43,24 +48,26 @@ footer {
 .btn_submit {
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
-  border-radius: 2rem;
+  border-radius: 0 2rem 2rem 0;
   color: #fff2e5;
   font-size: 1rem;
   background: #e69d76;
   padding: 0.7rem 0.9rem;
   border: none;
   text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
-
+/* Efeito ao clickar */
 .btn_submit:hover {
   background: #cf583a;
   text-decoration: none;
 }
 .current_weather {
   display: flex;
-  margin-top: 15vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
   justify-content: space-around;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .weather_today,
@@ -76,7 +83,12 @@ footer {
   border-radius: 5rem 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
-
+.weather_conditions {
+  align-items: center;
+}
+.block {
+  display: inline;
+}
 .text-deco {
   padding-left: 5rem;
   padding-top: 0.5rem;
@@ -84,9 +96,17 @@ footer {
 .weather_description {
   font-size: 2.2rem;
   margin-top: 1rem;
+  text-transform: capitalize;
 }
 .show_city {
   font-size: 2rem;
+}
+.show_city sup {
+  padding: 0.1em 0.4em;
+  border-radius: 30px;
+  /* color: var(--text_light); */
+  background: #e69d76;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 .weather_info_date {
   font-size: 0.75rem;
@@ -132,4 +152,25 @@ footer {
 .text_font_value_windSpeed {
   font-size: 1.75rem;
   padding-left: 6.5rem;
+}
+
+.weather__forecast {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.weather__forecast__icon {
+  max-width: 50%;
+}
+.weather__forecast__item {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 10px 10px 10px;
+  padding: 10px 5px 10px;
+  box-sizing: border-box;
+  min-width: 150px;
+  /* width: calc((100 / 6)% - 20px); */
+  flex-grow: 1;
 }

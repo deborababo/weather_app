@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,50 +12,102 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <section class="search_city"> 
+    <section class="search_city">
         <input type="search" class="weather_search" placeholder="Search for a City">
-       <button type="submit" class="btn_submit"><i class="fas fa-search"></i></button> 
+        <button type="submit" class="btn_submit"><i class="fas fa-search"></i></button>
     </section>
 
-  <!-- <sup class="country_index">PT</sup> linha 23 -->
+    <!-- <sup class="country_index">PT</sup> linha 23 -->
     <section class="current_weather">
         <div class="weather_today">
-            <div class="show_city text-deco">Aveiro | PT</div> 
-            <div class="weather_info_date text-deco">Monday, 20th May 2021 07:21 pm</div>
+            <div class="show_city text-deco">Aveiro <sup>PT</sup></div>
+            <div class="weather_info_date text-deco">Monday, 20th May 2021 - 07:21</div>
             <div class="weather_description text-deco">Broken Clouds</div>
-            <img src="images/icons/normal_mode/unknown.svg" alt="unknown city weather" class="weather_info_icon" width="150em">
-           <div class="temperature_min_max"> 
-               <div class="weather_info_temperature text-deco temperature_today"><span class="value">30</span><span>&#176;</span>C</div>      
-               <div > 
-                   <div class="weather_info_temperature"><i class="fas fa-long-arrow-alt-up"></i>H: <span class="value">29</span><span>&#176;</span>C</div>
-                   <div class="weather_info_temperature "><i class="fas fa-long-arrow-alt-down"></i>L: <span class="value">10</span><span>&#176;</span>C</div>
+            <img src="images/icons/normal_mode/unknown.svg" alt="unknown city weather" class="weather_info_icon"
+                width="150em">
+            <div class="temperature_min_max">
+                <div class="weather_info_temperature text-deco temperature_today "><span
+                        class="value">30</span><span>&#176;</span>C</div>
+                <div>
+                    <div class="weather_info_temperature high"><i class="fas fa-long-arrow-alt-up"></i>H: <span
+                            class="value">29</span><span>&#176;</span>C</div>
+                    <div class="weather_info_temperature low"><i class="fas fa-long-arrow-alt-down"></i>L: <span
+                            class="value">10</span><span>&#176;</span>C</div>
                 </div>
             </div>
             <!-- Ver Youtube Weather Mars para o toggle entre unidades de temperatura -->
-            <div class="weather_info_celcius text-deco change_unit" style="display: none;">Display<span>&#176;</span>C</div>
-            <div class="weather_info_fahrenheit text-deco change_unit" style="display: block;">Display<span>&#176;</span>F</div>
+            <div class="weather_info_celcius text-deco change_unit" style="display: none;">Display<span>&#176;</span>C
+            </div>
+            <div class="weather_info_fahrenheit text-deco change_unit" style="display: block;">
+                Display<span>&#176;</span>F</div>
         </div>
-        <!-- I should used the suddo class ::before for the images, need to improve that, made for the -->
+        <!-- I should used the suddo class ::before for the images, need to improve that, and chage div to h2 or p on titles-->
         <div class="weather_conditions">
-            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/feels_like.png" width="25rem"><div>Feels Like</div></div>
-            <div class="text-deco text_font_value"><span class="value">29</span><sup><span> &#176;</span>C</sup></div>
-            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/humidity.svg" width="25rem"><div>Humidity</div></div>
-            <div class="text-deco text_font_value"><span class="value">29</span><sup> %</sup></div>
-            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/chance_of_rain.png" width="25rem"><div>Chance of Rain</div></div>
-            <div class="text-deco text_font_value"><span class="value">68</span><sup> %</sup></div>
-            <div class="text-deco text_font_detail"> <img class="weather_details_icon" src="images/wind_speed.png" width="25rem"> <div>Wind Speed</div></div>
-            <div class="text-deco text_font_value_windSpeed"><span class="value">NW 10</span><sup> km/h</sup> </div>
+            <div class=" text_font_detail feel block"> <img class="weather_details_icon" src="images/feels_like.png"
+                    width="25rem">
+                <div class="block">Feels Like</div>
+            </div>
+            <div class="text_font_value feel"><span class="value">29</span><sup><span>
+                        &#176;</span>C</sup></div>
+            <div class="text_font_detail "> <img class="weather_details_icon " src="images/humidity.svg" width="25rem">
+                <div class="block">Humidity</div>
+            </div>
+            <div class="text_font_value humidity"><span class="value">29</span><sup> %</sup></div>
+            <!-- <div class="text-deco text_font_detail chaceRain"> <img class="weather_details_icon "
+                    src="images/chance_of_rain.png" width="25rem">
+                <div>Chance of Rain</div>
+            </div>
+            <div class="text_font_value"><span class="value">68</span><sup> %</sup></div> -->
+            <div class="text_font_detail"> <img class="weather_details_icon " src="images/wind_speed.png" width="25rem">
+                <div class="block">Wind Speed</div>
+            </div>
+            <div class=" text_font_value_windSpeed wind"><span class="value">NW 10</span><sup> m/s</sup>
+            </div>
             <!-- Adicionar pressão??? -->
         </div>
     </section>
-    <section class="week_weather">
+    <section class="week_weather weather__forecast">
+        <article class="weather__forecast__item">
+            <h3 class="weather__forecast__day">Day</h3>
+            <img src="images/icons/normal_mode/unknown.svg" alt="Clear sky" class="weather__forecast__icon">
+
+            <p class="weather__forecast__temperature"><span class="value">25</span> &deg;C</p>
+        </article>
+        <article class="weather__forecast__item">
+            <h3 class="weather__forecast__day">Day</h3>
+            <img src="images/icons/normal_mode/unknown.svg" alt="Clear sky" class="weather__forecast__icon">
+
+            <p class="weather__forecast__temperature"><span class="value">25</span> &deg;C</p>
+        </article>
+        <article class="weather__forecast__item">
+            <h3 class="weather__forecast__day">Day</h3>
+            <img src="images/icons/normal_mode/unknown.svg" alt="Clear sky" class="weather__forecast__icon">
+
+            <p class="weather__forecast__temperature"><span class="value">25</span> &deg;C</p>
+        </article>
+        <article class="weather__forecast__item">
+            <h3 class="weather__forecast__day">Day</h3>
+            <img src="images/icons/normal_mode/unknown.svg" alt="Clear sky" class="weather__forecast__icon">
+
+            <p class="weather__forecast__temperature"><span class="value">25</span> &deg;C</p>
+        </article>
+        <article class="weather__forecast__item">
+            <h3 class="weather__forecast__day">Day</h3>
+            <img src="images/icons/normal_mode/unknown.svg" alt="Clear sky" class="weather__forecast__icon">
+
+            <p class="weather__forecast__temperature"><span class="value">25</span> &deg;C</p>
+        </article>
+
 
     </section>
     <!-- Script -->
     <script src="script.js"></script>
+
+    <footer>
+        Made by Débora Babo <img src="images/Rocketship2Colour.svg" width="25rem">
+    </footer>
 </body>
-<footer>
-    Made by Débora Babo <img src="images/Rocketship2Colour.svg" width="25rem">
-</footer>
+
 </html>
